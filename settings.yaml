@@ -1,0 +1,30 @@
+# NAUTOBOT_URL: The full URL to your Nautobot instance.
+# - Include the protocol (http or https).
+# - Example: 'https://mynautobot.company.local'.
+NAUTOBOT_URL: "<insert_your_nautobot_url_here>"
+
+# NAUTOBOT_TOKEN: Your authentication token for Nautobot.
+# - Used to authenticate API requests to your Nautobot instance.
+# - By default, the script checks the NAUTOBOT_TOKEN environment variable first.
+# - If you prefer to store the token here, uncomment the line below and insert your token.
+#NAUTOBOT_TOKEN: "<insert_your_nautobot_token_here>"
+
+# CLUSTER_TYPE: The type of cluster to be created or referenced in Nautobot.
+# - Must match the cluster type defined in your Nautobot setup.
+# - Example: 'VMWare vSphere'.
+CLUSTER_TYPE: "<insert_cluster_type_here>"
+
+# vCenters: List of vCenter servers to connect to.
+# - Each entry requires:
+#   - name: A descriptive name for the vCenter (e.g., 'vcenter-prod-01', 'vcenter-test-01').
+#   - url: The full URL to the vCenter server (e.g., 'vcenter.company.local').
+# - Add more vCenters by duplicating the structure below as needed.
+vCenters:
+  - name: "<vcenter_name>"
+    url: "<insert_vcenter_url_here>"
+
+# USE_ENV_FOR_VCENTER_CREDENTIALS: Whether to use environment variables for vCenter credentials.
+# - Set to 'true' to use VCENTER_USERNAME and VCENTER_PASSWORD from environment variables.
+# - Set to 'false' to manually enter credentials each time the script runs.
+# - If 'true', ensure you set the environment variables:
+USE_ENV_FOR_VCENTER_CREDENTIALS: false

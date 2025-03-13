@@ -1,0 +1,9 @@
+__pycache__
+
+# Ignore all debugged data
+debug/data_comparison/*.json
+debug/data_comparison/history/*.json
+debug/imported_data_vcenter/*.yaml
+debug/imported_data_vcenter/*.csv
+debug/imported_nautobot_data/*.json
+

@@ -1,0 +1,22 @@
+---
+ntb_custom_fields:
+  - label: vcenter
+    key: vcenter
+    content_types:
+      - virtualization.virtualmachine
+      - virtualization.cluster
+      - virtualization.clustergroup
+    weight: 100
+    type: text
+  - label: vm_uuid
+    key: vm_uuid
+    content_types:
+      - virtualization.virtualmachine
+    weight: 100
+    type: text
+  - label: last_vcenter_sync
+    key: last_vcenter_sync
+    content_types:
+      - virtualization.virtualmachine
+    weight: 100
+    type: date

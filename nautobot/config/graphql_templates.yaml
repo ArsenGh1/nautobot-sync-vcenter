@@ -1,0 +1,61 @@
+collect_nautobot_data: |
+  query {
+    virtual_machines {
+      name
+      status {
+        name
+      }
+      _custom_field_data
+      cluster {
+        cluster_group {
+          name
+        }
+        name
+      }
+      interfaces {
+        name
+        mac_address
+        ip_addresses {
+          address
+        }
+      }
+    }
+  }
+
+collect_nautobot_data_by_vcenter: |
+  query {
+    virtual_machines(cf_vcenter: "%s") {
+      name
+      status {
+        name
+      }
+      _custom_field_data
+      cluster {
+        cluster_group {
+          name
+        }
+        name
+      }
+      interfaces {
+        name
+        mac_address
+        ip_addresses {
+          address
+        }
+      }
+    }
+  }
+
+collect_vcenter_clusters: |
+  query {
+    clusters {
+      name
+    }
+  }
+
+collect_vcenter_datacenters: |
+  query {
+    cluster_groups {
+      name
+    }
+  }
